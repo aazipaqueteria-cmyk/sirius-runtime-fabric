@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: sirius-runtime
+
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: sirius-runtime
+
+  template:
+
+    metadata:
+      labels:
+        app: sirius-runtime
+
+    spec:
+
+      containers:
+
+      - name: sirius-runtime
+        image: sirius/runtime:latest
+
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "512Mi"
+
+          limits:
+            cpu: "2000m"
+            memory: "2Gi"

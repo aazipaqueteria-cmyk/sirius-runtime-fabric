@@ -1,0 +1,10 @@
+{
+  "type":"object",
+  "properties":{
+    "tenant":{"type":"string"},
+    "priority":{"type":"string"},
+    "gpu":{"type":"boolean"},
+    "task":{"type":"string"}
+  },
+  "required":["tenant","task"]
+}
