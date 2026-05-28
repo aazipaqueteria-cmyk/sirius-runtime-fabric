@@ -1,0 +1,5 @@
+audit:
+  retention_days: 3650
+  immutable_logs: true
+  gdpr_mode: enabled
+  mx_data_protection: enabled

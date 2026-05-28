@@ -1,0 +1,7 @@
+billing:
+  enabled: true
+  metrics:
+    - api_calls
+    - runtime_minutes
+    - storage_usage
+    - ai_tokens
