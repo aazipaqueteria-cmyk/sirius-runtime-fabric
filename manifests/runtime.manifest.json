@@ -1,0 +1,16 @@
+{
+  "name":"Sirius Runtime Fabric",
+  "version":"0.1",
+  "modules":[
+    "runtime_fabric",
+    "contracts",
+    "observability",
+    "security",
+    "tenancy",
+    "testing",
+    "cicd"
+  ],
+  "execution_model":"distributed",
+  "deployment":"kubernetes",
+  "multitenant":true
+}
