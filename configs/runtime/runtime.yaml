@@ -1,0 +1,5 @@
+runtime:
+  replicas: 3
+  tracing: enabled
+  autoscaling: predictive
+  mesh: enabled
