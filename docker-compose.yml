@@ -1,0 +1,20 @@
+services:
+
+  sirius-api:
+    build:
+      context: .
+      dockerfile: docker/runtime/Dockerfile
+
+    ports:
+      - "8000:8000"
+
+  redis:
+    image: redis:7
+
+  postgres:
+    image: postgres:16
+
+    environment:
+      POSTGRES_USER: sirius
+      POSTGRES_PASSWORD: sirius
+      POSTGRES_DB: sirius_runtime
