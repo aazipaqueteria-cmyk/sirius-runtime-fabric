@@ -1,0 +1,30 @@
+name: sirius-runtime-ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+
+  runtime-validation:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v4
+
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.13'
+
+    - name: install
+      run: |
+        python -m venv .venv
+        source .venv/bin/activate
+        pip install -r requirements.lock.txt
+
+    - name: test
+      run: |
+        source .venv/bin/activate
+        pytest
