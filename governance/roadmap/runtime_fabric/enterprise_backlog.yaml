@@ -1,0 +1,68 @@
+runtime_execution:
+  priority: critical
+  deliverables:
+    - distributed_worker_pool
+    - task_lifecycle
+    - retry_engine
+    - dag_execution
+
+runtime_queue:
+  priority: critical
+  deliverables:
+    - priority_queue
+    - delayed_queue
+    - dead_letter_queue
+
+runtime_coordinator:
+  priority: critical
+  deliverables:
+    - worker_assignment
+    - workload_balancing
+    - resource_scheduling
+
+runtime_state_machine:
+  priority: critical
+  deliverables:
+    - workflow_state_engine
+    - state_persistence
+
+runtime_lease:
+  priority: high
+  deliverables:
+    - distributed_locking
+    - worker_heartbeat
+    - lease_recovery
+
+event_fabric:
+  priority: critical
+  deliverables:
+    - nats_streams
+    - event_replay
+    - event_sourcing
+
+runtime_mesh:
+  priority: high
+  deliverables:
+    - service_registry
+    - health_monitor
+    - circuit_breaker
+    - failover
+
+observability:
+  priority: high
+  deliverables:
+    - otel_tracing
+    - prometheus_metrics
+    - grafana_dashboards
+
+autoscaling:
+  priority: medium
+  deliverables:
+    - predictive_scaling
+    - ai_scheduler
+
+gitops:
+  priority: medium
+  deliverables:
+    - argocd_sync
+    - rollout_engine
